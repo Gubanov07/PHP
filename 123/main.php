@@ -1,9 +1,11 @@
 <?php
 
-$a=$_POST['inp'];
+$n=$_POST['inp'];
+$factorial = 1;
 
-$s=$a*(9/5)+32;
-
+for ($i = 1; $i <= $n; $i++) {
+    $factorial *= $i;
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +17,9 @@ $s=$a*(9/5)+32;
 </head>
 <body>
 	<form action="main.php" method="POST">
-		<input type="text" name="inp" value="<?php  echo $s;?>">
-		<input type="submit" value="конвертировать">
+		<input type="text" name="inp" value="<?php  echo $factorial;?>">
+		<input type="submit" value="посчитать">
+
 
 	</form>
 </body>
