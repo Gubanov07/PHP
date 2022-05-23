@@ -99,10 +99,14 @@
         return $this->name;
     }
 
-    }
     public function getText()
     {
         return $this->text;
+    }
+    
+    public function getAttrs()
+    {
+        return $this->attrs;
     }
 } 
 ?>
