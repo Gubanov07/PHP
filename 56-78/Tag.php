@@ -39,6 +39,7 @@ class Tag
             $this->attrs[$name] = $value;
             return $this; 
         }
+        
            public function removeAttr($name)
         {
             if(array_key_exists($name, $this->attrs))
@@ -46,6 +47,14 @@ class Tag
             unset($this->attrs[$name]);
             }
         return $this;
-        }        
-    } 
+        }   
+
+public function setAttrs($attrs)
+        {
+            foreach ($attrs as $name => $value) {
+            $this->setAttr($name, $value);
+        }
+        return $this;
+    }
+} 
 ?> 
