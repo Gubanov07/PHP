@@ -103,10 +103,15 @@
     {
         return $this->text;
     }
-    
+
     public function getAttrs()
     {
         return $this->attrs;
+    }
+
+    public function getAttr($attr)
+    {
+        return $this->attrs[$attr];
     }
 } 
 ?>
